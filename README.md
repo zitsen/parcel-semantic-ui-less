@@ -102,3 +102,74 @@ ln ../../node_modules/semantic-ui-less/themes . -sf
 mkdir themes
 ls ../../../node_modules/semantic-ui-less/themes |xargs -i ln ../../../node_modules/semantic-ui-less/themes/{} . -sf
 ```
+
+Import `semantic ui` in main js `src/index.js`:
+
+```jsx
+import * as React from 'react';
+
+import './semantic-ui/semantic.less';
+
+import { Breadcrumb, Divider } from 'semantic-ui-react'
+
+const sizes = ['mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive']
+
+const BreadcrumbExampleSize = () => (
+  <React.Fragment>
+    {sizes.map((size) => (
+      <React.Fragment key={size}>
+        <Breadcrumb size={size}>
+          <Breadcrumb.Section link>Home</Breadcrumb.Section>
+          <Breadcrumb.Divider icon='right chevron' />
+          <Breadcrumb.Section link>Registration</Breadcrumb.Section>
+          <Breadcrumb.Divider icon='right chevron' />
+          <Breadcrumb.Section active>Personal Information</Breadcrumb.Section>
+        </Breadcrumb>
+        <Divider hidden />
+      </React.Fragment>
+    ))}
+  </React.Fragment>
+)
+
+export default BreadcrumbExampleSize
+```
+
+Examples html `examples/index.html`:
+
+```html
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
+```
+
+`examples/index.js`:
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Demo from '../src/index'
+let root = document.getElementById('app')
+ReactDOM.render(<Demo />, root)
+```
+
+Node target support:
+
+```js
+import React from 'react'
+import ReactDOMServer from 'react-dom/server'
+import Demo from '../src/index'
+
+let demo = <Demo />
+
+let strings = ReactDOMServer.renderToString(demo)
+
+console.log(strings)
+```
