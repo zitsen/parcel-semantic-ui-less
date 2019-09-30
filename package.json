@@ -1,0 +1,54 @@
+{
+  "name": "parcel-v2-semantic-ui-less",
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "browser": "dist/browser/index.js",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=4.x"
+  },
+  "source": "src/index.js",
+  "targets": {
+    "main": {
+      "node": [
+        "^4.0.0"
+      ]
+    },
+    "module": {
+      "node": [
+        "^8.0.0"
+      ]
+    },
+    "browser": {
+      "browsers": [
+        "> 1%",
+        "not dead"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "parcel examples/index.html -d dist/examples/browser",
+    "dev:node": "parcel examples/cli.js -d dist/examples/node/",
+    "tests": "parcel tests/drug-to-pdf.js -t node -d dist/tests/",
+    "build": "parcel build index.html",
+    "start": "parcel serve index.html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "less": "^3.10.3",
+    "less-plugin-semantic-ui": "^0.0.2",
+    "parcel": "^1.12.3"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "semantic-ui-less": "^2.4.1",
+    "semantic-ui-react": "^0.88.1"
+  }
+}
