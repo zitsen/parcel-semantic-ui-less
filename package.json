@@ -41,7 +41,6 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "less": "^3.10.3",
-    "less-plugin-semantic-ui": "^0.0.2",
     "parcel": "^1.12.3"
   },
   "dependencies": {
