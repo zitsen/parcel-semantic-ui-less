@@ -1,5 +1,5 @@
 {
-  "name": "parcel-v2-semantic-ui-less",
+  "name": "parcel-semantic-ui-less",
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
   "browser": "dist/browser/index.js",
@@ -30,11 +30,8 @@
     }
   },
   "scripts": {
-    "dev": "parcel examples/index.html -d dist/examples/browser",
-    "dev:node": "parcel examples/cli.js -d dist/examples/node/",
-    "tests": "parcel tests/drug-to-pdf.js -t node -d dist/tests/",
-    "build": "parcel build index.html",
-    "start": "parcel serve index.html"
+    "eg.dev": "parcel examples/index.html -d dist/examples/browser",
+    "eg.node:dev": "parcel examples/cli.js -d dist/examples/node/"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
