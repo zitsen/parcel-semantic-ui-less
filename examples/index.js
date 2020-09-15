@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Demo from '../src/index'
+import Products from '../src/index'
 let root = document.getElementById('app')
-ReactDOM.render(<Demo />, root)
+ReactDOM.render(<Products />, root)
